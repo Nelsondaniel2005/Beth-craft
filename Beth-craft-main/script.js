@@ -198,14 +198,13 @@ setupLightbox();
 /* =========================================
    DYNAMIC CMS GALLERY LOADER
 ========================================= */
+
 async function loadDynamicGallery(category, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
     try {
         const response = await fetch(`./data/${category}.json`);
-        
-        // If the file doesn't exist yet, keep the hardcoded images
         if (!response.ok) return; 
 
         const data = await response.json();
@@ -216,23 +215,20 @@ async function loadDynamicGallery(category, containerId) {
             data.items.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'gallery-item';
-                // The image path from CMS starts with /images/uploads/
                 const imgPath = item.image.startsWith('/') ? item.image : `/${item.image}`;
                 div.innerHTML = `<img src="${imgPath}" alt="Handcrafted ${category} by Beth Craft" loading="lazy">`;
                 container.appendChild(div);
             });
-
-            // Re-run the lightbox setup to attach listeners to the NEW images
-            setupLightbox();
         }
     } catch (error) {
         console.log(`No dynamic data found for ${category} yet.`);
     }
 }
 
-// Run the loader when the page finishes loading
 document.addEventListener("DOMContentLoaded", () => {
     loadDynamicGallery("bags", "bags-gallery");
+    loadDynamicGallery("attire", "attire-gallery");
+    loadDynamicGallery("accessories", "accessories-gallery");
+    loadDynamicGallery("cloth", "cloth-gallery");
+    loadDynamicGallery("others", "others-gallery");
 });
-
-console.log("Beth Craft website loaded successfully ✨");
