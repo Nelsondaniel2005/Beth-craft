@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nelsondaniel2005.github.io/Beth-craft/sitemap.xml
+Sitemap: https://bethcraft.netlify.app/sitemap.xml
