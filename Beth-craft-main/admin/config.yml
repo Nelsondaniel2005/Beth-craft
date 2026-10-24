@@ -13,8 +13,40 @@ collections:
         name: "bags_gallery"
         file: "Beth-craft-main/data/bags.json"
         fields:
-          - label: "Bags"
-            name: "items"
-            widget: "list"
-            fields:
-              - {label: "Image", name: "image", widget: "image"}
+          - {label: "Bags", name: "items", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
+
+  - name: "attire"
+    label: "Beaded Attire"
+    files:
+      - label: "Manage Attire Gallery"
+        name: "attire_gallery"
+        file: "Beth-craft-main/data/attire.json"
+        fields:
+          - {label: "Attire", name: "items", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
+
+  - name: "accessories"
+    label: "Accessories"
+    files:
+      - label: "Manage Accessories Gallery"
+        name: "accessories_gallery"
+        file: "Beth-craft-main/data/accessories.json"
+        fields:
+          - {label: "Accessories", name: "items", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
+
+  - name: "cloth"
+    label: "Beaded Cloth"
+    files:
+      - label: "Manage Cloth Gallery"
+        name: "cloth_gallery"
+        file: "Beth-craft-main/data/cloth.json"
+        fields:
+          - {label: "Cloth", name: "items", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
+
+  - name: "others"
+    label: "Other Designs"
+    files:
+      - label: "Manage Others Gallery"
+        name: "others_gallery"
+        file: "Beth-craft-main/data/others.json"
+        fields:
+          - {label: "Designs", name: "items", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}]}
