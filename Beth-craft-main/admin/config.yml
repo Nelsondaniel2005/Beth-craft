@@ -13,3 +13,35 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+
+  - name: "attire"
+    label: "Beaded Attire"
+    folder: "Beth-craft-main/images/attire"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: "accessories"
+    label: "Accessories"
+    folder: "Beth-craft-main/images/accessories"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: "cloth"
+    label: "Beaded Cloth"
+    folder: "Beth-craft-main/images/cloth"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: "others"
+    label: "Other Designs"
+    folder: "Beth-craft-main/images/others"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
